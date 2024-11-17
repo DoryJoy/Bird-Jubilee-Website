@@ -1,0 +1,132 @@
+/*the external cascading stylesheet*/
+/*Author: Dory Gillikin*/
+/*Date Created: 11/9/2019*/
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+	 font-family: Arial, Helvetica, sans-serif;
+	 background: url('birdBack.jpg');
+	 background-repeat: repeat;
+	 background-size: cover;
+	 opacity: 1;	 
+}
+h2 {
+  color: #008B8B;
+  padding: 15px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #483D8B;
+}
+p {
+	color: #AFEEEE;
+	font-size: 1.2em;
+	line-height: 2em;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table; 
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+.header {
+  font-family:Papyrus, fantasy;
+  background-color: #66CDAA; 
+  color: #008B8B;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1.3px 1.3px 1.3px #483D8B;
+  box-shadow: 0 1px 3px #483D8B, 0 1px 2px #483D8B;
+  border: 2px solid #5F9EA0;
+  border-radius: 20px;		
+  opacity: 1;
+  
+}
+ul {font-family:Papyrus, fantasy;
+    list-style: none;     
+	text-shadow: 1.3px 1.3px 1.3px #483D8B; 
+	opacity: 1;
+}
+ul li {		      
+      line-height: 30px;
+      text-align: center;	  
+      font-size: 1.5em;	 
+}
+ul li a {
+	  text-decoration: none; 
+	  color: #20B2AA;	  
+}
+.menu ul { 
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+	padding: 8px;
+	margin-bottom: 7px;
+	background-color: #87CEEB;	
+	box-shadow: 0 1px 3px #483D8B, 0 1px 2px #483D8B;
+	border: 2px solid #5F9EA0;
+	border-radius: 10px;		
+}
+.menu li:hover {
+  background-color: #E0FFFF;
+}
+.aside {
+  background-color: #87CEEB;
+  padding: 15px;
+  text-align: center;
+  text-shadow: 1.3px 1.3px 1px #483D8B; 
+  box-shadow: 0 1px 3px #483D8B, 0 1px 2px #483D8B;
+  border: 2px solid #5F9EA0;
+  border-radius: 10px;		
+  opacity:1;
+}
+.footer {
+	  color:#191970;
+	  background-color: #87CEEB;	  
+	  text-align: center;	  		       
+      padding: 1%;
+	  border: 1px solid #4169E1;
+      border-radius: 10px;
+	  font-size: 80%;	 
+		}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+  

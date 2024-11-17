@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+	<!--Author: Dory Gillikin-->
+	<!--Date Created: 11/15/201-->
+
+<html lang="en">
+<head>
+<title>mini3</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--favicon-->
+<link rel="icon" type="image/png" href="favicon.ico">	
+    <!--external style sheet-->	
+	<link href="styleSheet.css" rel="styleSheet">
+</head>
+	<!--embedded style-->		 		
+<style>
+<!--fieldset & form with float-->
+fieldset { 
+    border: 2px ridge #ff0000;	
+    padding: 8px;
+	
+}
+legend { 
+		font-family: Georgia, "Times New Roman", serif;
+        font-weight: bold
+		color: #4B0082;	 
+}
+form {
+	   margin-bottom: 2%;
+	   margin-left:3%;
+	   background-color:#87CEEB ;
+	   border-radius: 15px;
+       font-family: Arial, sans-serif;
+       padding-left: 5%;
+	   padding-top: .9%;
+	   padding-bottom: .9%; 	   
+	   width: 70%;	
+}
+label { 
+		float: left;
+        clear: left;
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 10px; 
+		font-family: Arial, sans-serif; 
+}
+input, textarea { 
+		margin-top: 10px;
+        display: block; 		
+}
+#mySubmit { margin-left: 110px; }
+
+.newColors {
+            box-shadow: 0 1px 3px #483D8B, 0 1px 2px #483D8B;
+			border: 2px solid #5F9EA0;
+			border-radius: 20px;		
+			opacity: 1;   
+			padding: 15px;
+            }
+</style><body>
+
+<div id="header">
+  <h1>Bird Jubilee</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li><a href="index.htm">Home</a></li>
+      <li><a href="toys.htm">Toys</a></li>
+      <li><a href="playstands.htm">Playstands</a></li>
+      <li><a href="treats.htm">Treats</a></li>
+	  <li><a href="contact.htm">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9">
+    <h2>Only The Very Best For Your Feathered Friends</h2>
+    <p>Contact Us.<br>
+	We welcome your <br>
+	questions and suggestions.</p>
+<div id="slideshow">
+        <img src="bird2.jpg" alt="Rainbow lorakeets" 
+		style="height: 175px; width: 375px; 
+		border: 2px solid #808080; border-radius: 15px; margin-top: 10px;"/>
+		<img src="bird3.jpg" alt="Rainbow lorakeets"
+		style="height: 175px; width: 375px; 
+		border: 2px solid #808080; border-radius: 15px; margin-top: 10px;"/>
+		<img src="bird5.jpg" alt="Rainbow lorakeets" 
+		style="height: 175px; width: 375px; 
+		border: 2px solid #808080; border-radius: 15px; margin-top: 10px;"/>
+		<img src="bird6.jpg" alt="Rainbow lorakeets" 
+		style="height: 175px; width: 375px; 
+		border: 2px solid #808080; border-radius: 15px; margin-top: 10px;"/>		
+		<img src="bird7.jpg" alt="Rainbow lorakeets" 
+		style="height: 175px; width: 375px; 
+		border: 2px solid #808080; border-radius: 15px; margin-top: 10px;"/>
+		</div>
+		 </div>
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>W</h2>
+      <p>C</p>
+      <h2>W</h2>
+      <p>ea.</p>
+      <h2>H</h2>
+      <p> Europe.</p>
+    </div>
+  </div>
+</div>
+
+ <form>
+   <label for="myName">Name:</label>
+   <input type="text" name="myName" id="myName">
+   <label for="myEmail">E-mail:</label>
+   <input type="text" name="myEmail" id="myEmail">
+   <label for="myComments">Comments:</label>
+   <textarea name="myComments" id="myComments" rows="2"
+   cols="20"></textarea>
+   <input id="mySubmit" type="submit" value="Submit">
+</form>     
+    </div>
+	
+    <script>
+var slideShow = function(container) {
+    this.images = [];
+    this.curImage = 0;
+    for (i = 0; i < container.childElementCount; i++) {
+        this.images.push(container.children[i]);
+        this.images[i].style.display = "none";
+    }
+    
+    // Handle going to to the next slide
+    var nextSlide = function() {
+        for (var i = 0; i < this.images.length; i++) {
+            this.images[i].style.display = "none";
+        }
+        this.images[this.curImage].style.display = "block";
+        this.curImage++;
+        if (this.curImage >= this.images.length) {
+            this.curImage = 0;
+        }
+        window.setTimeout(nextSlide.bind(this), 2000);
+    };   
+    nextSlide.call(this);
+	};
+	slideShow(document.getElementById("slideshow"));
+	
+	//Modify styles and attributes through javascript using the DOM 
+    //Set innerHTML and textContent through javascript using the DOM 
+	var headingEl = document.querySelector("#header");
+            headingEl.className = "newColors";		
+			headingEl.style.textAlign = "center";
+			headingEl.style.color = "#87CEEB";
+			headingEl.style.backgroundColor = "#7B68EE";			
+			headingEl.innerHTML = "<strong>Where the <em>Birds</em> Are</strong>";
+    </script>
+	
+<div class="footer">
+	Copyright &copy; November 2019 Dory Gillikin<br>
+<script language="Javascript">
+	document.write("This page was last modified on: " + document.lastModified +"");
+</script><br>
+    <a href="mailto:dory@hawaii.edu">dory@hawaii.edu</a>
+</footer></div>
+   
+	  </body>    
+		</html>
+
